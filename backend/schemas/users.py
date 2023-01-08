@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 class UserSchema(BaseModel):
     id: int
-    username: int
+    username: str
 
     class Config:
         orm_mode = True
@@ -20,4 +20,4 @@ class RegisterSchema(BaseModel):
 
 
 class TokenResponse(BaseModel):
-    token: str
+    access_token: str
